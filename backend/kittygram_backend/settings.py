@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = secrets.DOCKER_USERNAME
+SECRET_KEY = secrets.SECRET_KEY
 
 DEBUG = False
 
