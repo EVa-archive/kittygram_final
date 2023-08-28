@@ -8,7 +8,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'None')
 
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = ['84.201.177.33', '127.0.0.1', 'localhost', 'kittygramproject.serveblog.net']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -65,7 +65,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -99,7 +98,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'collected_static'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/media'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
